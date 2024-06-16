@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schoollife Documentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" />
+  </head>
+  <body class="bg-gray-900 text-white">
+    <div class="container mx-auto py-8">
+      <h1>Schoollife Documentation</h1>
+<p>Welcome to the documentation for the <code>schoollife</code> npm package!</p>
+<h1>Introduction</h1>
+<p>Schoollife is an npm package that provides a collection of functions related to school life. It includes utilities for printing welcome messages, homework reminders, lunch specials, course registrations, exam reminders, project deadlines, club meetings, party reminders, and nostalgic quotes.</p>
+<h2>Installation</h2>
+<p>To install the <code>schoollife</code> package, run the following command:</p>
+<pre><code class="language-bash">npm install schoollife
+</code></pre>
+<h2>Usage</h2>
+<p>To use the schoollife package in your project, follow these steps:</p>
+<ol>
+<li>Import the functions you want to use from the package:<pre><code class="language-js">const schoolUtils = require('schoollife');
+</code></pre>
+</li>
+<li>Call the desired functions:<pre><code class="language-js">schoolUtils.welcomeToSchool(); // Output: Welcome to school!
+schoolUtils.homework('Math', 'algebra problems'); // Output: Don't forget to do your algebra problems for Math class!
+schoolUtils.lunchTime('Pizza'); // Output: Time for lunch! Today's special is Pizza.
+schoolUtils.nostalgia(); // Output: (random nostalgic quote related to school life)
+</code></pre>
+</li>
+</ol>
+<h2>Avoiding ES6 Module Errors</h2>
+<p>If you encounter an error related to ES6 modules when using the schoollife package, follow these steps to resolve the issue:</p>
+<ol>
+<li>In your project directory, create a package.json file if it doesn't already exist:<pre><code class="language-js">npm init -y
+</code></pre>
+</li>
+<li>Open the <code>package.json</code> file and add the following line:</li>
+</ol>
+<pre><code class="language-js">     {
+    &quot;type&quot;: &quot;module&quot;
+    }
+</code></pre>
+<ol start="3">
+<li>
+<p>Rename your entry file (e.g., index.js) to index.mjs (or any other extension that Node.js recognizes as an ES6 module, like .js with &quot;type&quot;: &quot;module&quot; in package.json).</p>
+</li>
+<li>
+<p>Import the schoollife package using the ES6 module syntax:</p>
+<pre><code class="language-js">import * as schoolUtils from 'schoollife';
+</code></pre>
+</li>
+<li>
+<p>Run your script using the node command with the <code>--loader=module flag</code>:</p>
+<pre><code class="language-js">node --loader=module index.mjs
+</code></pre>
+<h2>Test File</h2>
+<pre><code class="language-js">import fetch from 'node-fetch';
+import * as schoolUtils from './index.js';
+schoolUtils.registration(['Computer Science', 'Calculus', 'English Lit']);
+// Output: You have registered for the following courses: Computer Science, Calculus, English Lit
+schoolUtils.examReminder('Physics', 'June 20th');
+// Output: Don't forget! Your Physics exam is on June 20th.
+schoolUtils.projectDeadline('Web Development', 'July 1st');
+// Output: Your Web Development project is due on July 1st. Better start working on it!
+schoolUtils.clubMeeting('Chess', 'Fridays', '5 PM');
+// Output: The Chess club meeting is on Fridays at 5 PM.
+schoolUtils.partyReminder('Spring Break', 'Beach House', 'March 15th');
+// Output: Hey, there's a Spring Break party at Beach House on March 15th. Don't miss it!
+schoolUtils.nostalgia();
+</code></pre>
+<h1>Contribution</h1>
+<p>If you would like to contribute to the schoollife package, feel free to submit a pull request or open an issue on the GitHub repository.</p>
+</li>
+</ol>
+
+    </div>
+  </body>
+</html>
