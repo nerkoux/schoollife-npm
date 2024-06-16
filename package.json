@@ -1,11 +1,12 @@
 {
   "name": "schoollife",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Package to make you remember your school life",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "api": "node --loader=module ./api/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,9 @@
   },
   "homepage": "https://github.com/nerkoux/schoollife-npm#readme",
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "path": "^0.12.7"
   }
 }

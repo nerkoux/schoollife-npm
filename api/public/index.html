@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Utilities</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Homework Reminder</h1>
+    <form id="homework-form">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+      
+      <label for="assignment">Assignment:</label>
+      <input type="text" id="assignment" name="assignment" required>
+      
+      <button type="submit">Get Reminder</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('homework-form').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const subject = document.getElementById('subject').value;
+      const assignment = document.getElementById('assignment').value;
+      
+      try {
+        const response = await fetch(`/homework?subject=${subject}&assignment=${assignment}`);
+        const data = await response.json();
+        document.getElementById('result').innerText = data.message;
+      } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('result').innerText = 'Failed to get reminder.';
+      }
+    });
+  </script>
+</body>
+</html>
