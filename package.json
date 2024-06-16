@@ -1,6 +1,6 @@
 {
   "name": "schoollife",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Package to make you remember your school life",
   "main": "index.js",
   "type": "module",
