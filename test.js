@@ -1,4 +1,6 @@
-const schoolUtils = require('./index');
+import fetch from 'node-fetch';
+import * as schoolUtils from './index.js';
+
 
 schoolUtils.registration(['Computer Science', 'Calculus', 'English Lit']);
 // Output: You have registered for the following courses: Computer Science, Calculus, English Lit
@@ -14,3 +16,5 @@ schoolUtils.clubMeeting('Chess', 'Fridays', '5 PM');
 
 schoolUtils.partyReminder('Spring Break', 'Beach House', 'March 15th');
 // Output: Hey, there's a Spring Break party at Beach House on March 15th. Don't miss it!
+
+schoolUtils.nostalgia();
