@@ -1,0 +1,25 @@
+{
+  "name": "schoollife",
+  "version": "1.0.0",
+  "description": "Package to make you remember your school life",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerkoux/schoollife-npm.git"
+  },
+  "keywords": [
+    "school",
+    "life",
+    "nostalgia",
+    "todo"
+  ],
+  "author": "Akshat Mehta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nerkoux/schoollife-npm/issues"
+  },
+  "homepage": "https://github.com/nerkoux/schoollife-npm#readme"
+}
