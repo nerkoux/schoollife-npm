@@ -91,7 +91,7 @@ To use the schoollife package in your project, follow these steps:
       ```
    2. Create a public directory in your project root and add an index.html file to it with the following content:
   
-     ```
+     ```html
      <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -166,7 +166,7 @@ To use the schoollife package in your project, follow these steps:
     </html>
    ```
 3. Update your package.json to include a api start script:
-  ```
+  ```js
   {
   "name": "schoollife",
   "version": "1.0.5",
